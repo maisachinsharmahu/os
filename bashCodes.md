@@ -1,19 +1,5 @@
 # Bash Scripts
-
-## 📌 Script List (Click to Jump)
-
-1. [Greatest of Three Numbers](#1-greatest-of-three-numbers)
-2. [Even or Odd](#2-even-or-odd)
-3. [Prime Check](#3-prime-check)
-4. [Number or String](#4-number-or-string)
-5. [Count Words & Characters in File](#5-count-words--characters-in-file)
-6. [Average of n Numbers](#6-average-of-n-numbers)
-7. [Fibonacci Series](#7-fibonacci-series)
-8. [Factorial of a Number](#8-factorial-of-a-number)
-9. [Sum of Digits](#9-sum-of-digits)
-10. [Palindrome Check](#10-palindrome-check)
-
----
+ 
 
 # CODE SCRIPTS (ALL IN ONE)
 
