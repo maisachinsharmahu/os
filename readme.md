@@ -1,6 +1,4 @@
----
-
-## 📂 **Index – Click to Open Any File**
+ ## 📂 **Index – Click to Open Any File**
 
 ### 🧮 **CPU Scheduling Algorithms**
 - [FCFS Scheduling](FCFS.md)
@@ -18,5 +16,4 @@
 
 ### 🐚 **Bash Scripts**
 - [All Bash Scripts (One File)](bashCodes.md)
-
----
+ 
