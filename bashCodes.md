@@ -2,25 +2,25 @@
 
 ## 📌 Script List (Click to Jump)
 
-1. [Greatest of Three Numbers](#greatest-of-three-numbers)
-2. [Even or Odd](#even-or-odd)
-3. [Prime Check](#prime-check)
-4. [Number or String](#number-or-string)
-5. [Count Words & Characters in File](#count-words--characters-in-file)
-6. [Average of n Numbers](#average-of-n-numbers)
-7. [Fibonacci Series](#fibonacci-series)
-8. [Factorial of a Number](#factorial-of-a-number)
-9. [Sum of Digits](#sum-of-digits)
-10. [Palindrome Check](#palindrome-check)
+1. [Greatest of Three Numbers](#1-greatest-of-three-numbers)
+2. [Even or Odd](#2-even-or-odd)
+3. [Prime Check](#3-prime-check)
+4. [Number or String](#4-number-or-string)
+5. [Count Words & Characters in File](#5-count-words--characters-in-file)
+6. [Average of n Numbers](#6-average-of-n-numbers)
+7. [Fibonacci Series](#7-fibonacci-series)
+8. [Factorial of a Number](#8-factorial-of-a-number)
+9. [Sum of Digits](#9-sum-of-digits)
+10. [Palindrome Check](#10-palindrome-check)
 
 ---
 
 # CODE SCRIPTS (ALL IN ONE)
 
 ```bash
-# ---------------------------------------------------------
-# Greatest of Three Numbers
-# ---------------------------------------------------------
+# =========================================================
+# 1. Greatest of Three Numbers
+# =========================================================
 echo "Enter first number:"
 read a
 echo "Enter second number:"
@@ -29,84 +29,89 @@ echo "Enter third number:"
 read c
 
 if [ $a -ge $b ] && [ $a -ge $c ]; then
-  echo "Greatest: $a"
+    echo "Greatest: $a"
 elif [ $b -ge $a ] && [ $b -ge $c ]; then
-  echo "Greatest: $b"
+    echo "Greatest: $b"
 else
-  echo "Greatest: $c"
+    echo "Greatest: $c"
 fi
 
-# ---------------------------------------------------------
-# Even or Odd
-# ---------------------------------------------------------
+
+# =========================================================
+# 2. Even or Odd
+# =========================================================
 echo "Enter a number:"
 read n
 
 if [ $((n % 2)) -eq 0 ]; then
-  echo "$n is Even"
+    echo "$n is Even"
 else
-  echo "$n is Odd"
+    echo "$n is Odd"
 fi
 
-# ---------------------------------------------------------
-# Prime Check
-# ---------------------------------------------------------
+
+# =========================================================
+# 3. Prime Check
+# =========================================================
 echo "Enter a number:"
 read n
 
 if [ $n -le 1 ]; then
-  echo "$n is not prime"
-  exit
+    echo "$n is not prime"
+    exit
 fi
 
 flag=0
 for ((i=2; i<n; i++))
 do
-  if [ $((n % i)) -eq 0 ]; then
-    flag=1
-    break
-  fi
+    if [ $((n % i)) -eq 0 ]; then
+        flag=1
+        break
+    fi
 done
 
 if [ $flag -eq 0 ]; then
-  echo "$n is Prime"
+    echo "$n is Prime"
 else
-  echo "$n is Not Prime"
+    echo "$n is Not Prime"
 fi
 
-# ---------------------------------------------------------
-# Number or String
-# ---------------------------------------------------------
+
+# =========================================================
+# 4. Number or String
+# =========================================================
 echo "Enter input:"
 read input
 
 if [[ $input =~ ^[0-9]+$ ]]; then
-  echo "$input is a Number"
+    echo "$input is a Number"
 else
-  echo "$input is a String"
+    echo "$input is a String"
 fi
 
-# ---------------------------------------------------------
-# Count Words & Characters in File
-# ---------------------------------------------------------
+
+# =========================================================
+# 5. Count Words & Characters in File
+# =========================================================
 echo "Enter filename:"
 read filename
 
 if [[ -f $filename ]]; then
-  while IFS= read -r line; do
-    words=$(echo "$line" | wc -w)
-    chars=$(echo "$line" | wc -c)
-    echo "Line: $line"
-    echo "Words: $words | Characters: $chars"
-    echo "-----------------------------"
-  done < "$filename"
+    while IFS= read -r line; do
+        words=$(echo "$line" | wc -w)
+        chars=$(echo "$line" | wc -c)
+        echo "Line: $line"
+        echo "Words: $words | Characters: $chars"
+        echo "-----------------------------"
+    done < "$filename"
 else
-  echo "File not found!"
+    echo "File not found!"
 fi
 
-# ---------------------------------------------------------
-# Average of n Numbers
-# ---------------------------------------------------------
+
+# =========================================================
+# 6. Average of n Numbers
+# =========================================================
 echo "Enter the count of numbers (n):"
 read n
 
@@ -114,8 +119,8 @@ sum=0
 echo "Enter $n numbers:"
 for (( i=1; i<=n; i++ ))
 do
-  read num
-  sum=$((sum + num))
+    read num
+    sum=$((sum + num))
 done
 
 average=$((sum / n))
@@ -123,9 +128,10 @@ average=$((sum / n))
 echo "Sum = $sum"
 echo "Average = $average"
 
-# ---------------------------------------------------------
-# Fibonacci Series
-# ---------------------------------------------------------
+
+# =========================================================
+# 7. Fibonacci Series
+# =========================================================
 echo "Enter the number of terms (n):"
 read n
 
@@ -136,30 +142,32 @@ echo "Fibonacci series up to $n terms:"
 
 for (( i=1; i<=n; i++ ))
 do
-  echo -n "$a "
-  fn=$((a + b))
-  a=$b
-  b=$fn
+    echo -n "$a "
+    fn=$((a + b))
+    a=$b
+    b=$fn
 done
 echo
 
-# ---------------------------------------------------------
-# Factorial
-# ---------------------------------------------------------
+
+# =========================================================
+# 8. Factorial
+# =========================================================
 echo "Enter a number:"
 read n
 
 fact=1
 for (( i=1; i<=n; i++ ))
 do
-  fact=$((fact * i))
+    fact=$((fact * i))
 done
 
 echo "Factorial of $n is $fact"
 
-# ---------------------------------------------------------
-# Sum of Digits
-# ---------------------------------------------------------
+
+# =========================================================
+# 9. Sum of Digits
+# =========================================================
 echo "Enter a number:"
 read n
 
@@ -167,23 +175,24 @@ sum=0
 
 while [ $n -gt 0 ]
 do
-  digit=$((n % 10))
-  sum=$((sum + digit))
-  n=$((n / 10))
+    digit=$((n % 10))
+    sum=$((sum + digit))
+    n=$((n / 10))
 done
 
 echo "Sum of digits = $sum"
 
-# ---------------------------------------------------------
-# Palindrome Check
-# ---------------------------------------------------------
+
+# =========================================================
+# 10. Palindrome Check
+# =========================================================
 echo "Enter a string:"
 read str
 
 rev=$(echo "$str" | rev)
 
 if [ "$str" == "$rev" ]; then
-  echo "$str is a Palindrome"
+    echo "$str is a Palindrome"
 else
-  echo "$str is NOT a Palindrome"
+    echo "$str is NOT a Palindrome"
 fi
